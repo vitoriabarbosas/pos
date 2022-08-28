@@ -2,7 +2,7 @@
 
 Grupo: Matheus Lemes Tassara e Vitória Barbosa da Silva.
 
-Git: https://github.com/vitoriabarbosas/pos/tree/main/Java%20Foundations%20%26%20UX 
+Git: https://github.com/vitoriabarbosas/pos/tree/main/Frontend%20Mobile
 
 ## Primeira Etapa: 
 
