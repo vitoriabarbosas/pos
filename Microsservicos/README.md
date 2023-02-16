@@ -137,27 +137,6 @@ Exemplo de retorno **GET** ao realizar a compra de 2 tickets:
 }
 ```
 
-### Integração com AWS SNS 
-
-Para o envio de e-mails, foi escolhido o AWS SNS por conta da familiaridade entre os membros do grupo e por já estarmos pensando em um serviço operando na Cloud AWS. Sendo assim, siga os passos para se utilizar a localstack.
-
-Instalar localstack: 
-```
-pip install localstack
-pip install awscli-local
-```
-
-Comandos para utilizar a localstack: 
-```
-$ localstack start
-$ awslocal sns create-topic --name sns-recarga-top
-$ awslocal sns set-topic-attributes --topic-arn arn:aws:sns:us-east-1:000000000000:sns-recarga-top --attribute-name DisplayName --attribute-value RecargaTopTopico
-$ awslocal sns list-topics
-$ awslocal sns publish --topic-arn "arn:aws:sns:us-east-1:000000000000:sns-recarga-top" --message "Oi, Vitoria! Muito obrigadx por realizar esta compra!"
-$ awslocal sns subscribe --topic-arn arn:aws:sns:us-east-1:000000000000:sns-recarga-top --protocol email --notification-endpoint email@gmail.com
-$ awslocal sns set-subscription-attributes --subscription-arn arn:aws:sns:us-east-1:000000000000:sns-recarga-top:eecadcae-30ae-4493-a763-2de9aad3a562 --attribute-name RawMessageDelivery --attribute-value true
-```
-
 ### Documentação de Referência
 
 - [Lambda Container](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
