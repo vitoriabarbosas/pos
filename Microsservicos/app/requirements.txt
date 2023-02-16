@@ -1,0 +1,8 @@
+boto3
+logging
+request
+Flask==2.2.2
+flask-lambda-python36
+random
+randint
+localstack
