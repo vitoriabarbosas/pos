@@ -1,0 +1,20 @@
+<div class = "container">
+    <table>
+        <tr>
+            <th>Incidente ID </th>
+            <th>Nome </th>
+            <th>Email </th>
+            <th>Assunto </th>
+            <th>Descrição </th>
+        </tr>
+        {% for incidente in incidentes %}
+        <tr>
+            <th>{{incidente.id}}</th>
+            <th>{{incidente.name}} </th>
+            <th>{{incidente.email}}</th>
+            <th>{{incidente.assunto}} </th>
+            <th>{{incidente.description}} </th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
